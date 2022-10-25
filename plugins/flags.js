@@ -41,4 +41,7 @@ async function initRollout() {
   await Rox.setup("6355774f90ae400245103cee", options)
 }
 
+initRollout().then(function() {
+  console.log('Done loading Rollout');
+})
 

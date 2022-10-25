@@ -20,7 +20,7 @@
         <h1
           class="text-[28px] md:text-[25px] lg:text-[32px] font-semibold ml-3"
         >
-          {{ welcomeMsg }}, Amir!
+          {{ welcomeMsg }}, KubeCon
         </h1>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <!-- Dark mode -->
     <div
       class="relative hidden md:flex items-center justify-between px-3 w-[90px] h-[50px] bg-white dark:bg-[#364680] rounded-full hover:cursor-pointer"
-      @click="darkModeChange"
+      @click='darkModeChange'
     >
       <i
         class="ri-sun-line text-white dark:text-[#D6E4FF] text-[24px] z-10"
@@ -45,10 +45,14 @@
 </template>
 
 <script>
+import Rox from 'rox-browser'
+
 export default {
   data() {
+    const d = new Date();
+    let time = d.getHours() + ":" + d.getMinutes();
     return {
-      time: "00:00",
+      time: time,
     };
   },
   methods: {

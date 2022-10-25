@@ -13,7 +13,7 @@
         class="flex items-center hover:cursor-pointer text-[#5C92FF] transition ease-in-out duration-300 hover:bg-[#F5F8FF] dark:hover:bg-[#001c5c] rounded-lg px-2 -mr-3"
       >
         <i class="ri-map-pin-2-line text-[22px]"></i>
-        <p class="text-[17px] text-[#BDC2DB] ml-[10px]">Karaj</p>
+        <p class="text-[17px] text-[#BDC2DB] ml-[10px]">Detroit</p>
         <i class="ri-arrow-down-s-line text-[20px] ml-[5px]"></i>
       </div>
     </div>
