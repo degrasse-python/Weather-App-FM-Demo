@@ -4,6 +4,7 @@ export const Flags = {
   airQuality: new Flag(false),
   goldenHour: new Flag(false),
   searchBar: new Flag(false),
+  aside: new Flag(false),
 }
 
 
@@ -34,11 +35,10 @@ async function initRollout() {
     impressionHandler: impressionHandler
   }
 
-// Defined Properties
-
+  // Defined Properties
   Rox.register('default', Flags)
   // test env key
-  await Rox.setup("6355774f90ae400245103cee", options)
+  await Rox.setup(process.env.CBFM_KEY, options)
 }
 
 initRollout().then(function() {

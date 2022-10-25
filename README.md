@@ -2,7 +2,7 @@
 
 # Weather
 
-The Weather project displays information using the API. Among the important points of the seven-day information are three different cities. This project modeled on a shot in dribbble written using NUXT.js. [Preview](https://weather-nuxt-one.vercel.app/)
+The Weather project displays information using the API. Among the important points of the seven-day information are three different cities. This project modeled on a shot in dribbble written using NUXT.js.
 
 ## Lessons Learned
 

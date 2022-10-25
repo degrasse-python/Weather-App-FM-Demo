@@ -70,23 +70,23 @@ export default {
         return "Good afternoon";
       } else {
         return "Good night";
-      }
-    },
-  },
-  beforeCreate() {
-    // get time
-    setInterval(() => {
-      const d = new Date();
-      const hour = d.getHours();
-      const minutes = d.getMinutes();
-      const format = hour >= 12 ? "PM" : "AM";
+          }
+        },
+      },
+    beforeCreate() {
+      // get time
+      setInterval(() => {
+        const d = new Date();
+        const hour = d.getHours();
+        const minutes = d.getMinutes();
+        const format = hour >= 12 ? "PM" : "AM";
 
-      this.time = `${hour > 12 ? hour - 12 : hour}:${
-        minutes < 10 ? "0" + minutes : minutes
-      } ${format}`;
-    }, 1000);
-  },
-};
+        this.time = `${hour > 12 ? hour - 12 : hour}:${
+          minutes < 10 ? "0" + minutes : minutes
+        } ${format}`;
+      }, 1000);
+    },
+  };
 </script>
 
 <style></style>
