@@ -1,6 +1,4 @@
 
-![Logo](https://cdn.dribbble.com/users/2716253/screenshots/16206037/media/1e774d64f78a5b719b2b3e7b80e61672.png)
-
 
 # Weather
 
