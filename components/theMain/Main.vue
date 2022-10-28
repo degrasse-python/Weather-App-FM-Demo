@@ -31,6 +31,14 @@ import { Flags } from '../../plugins/flags'
 
 
 export default {
+
+  data () {
+    return {
+      // isDev: process.env.NODE_ENV === 'development',
+      searchBar: Flags.searchBar.isEnabled(),
+      airQuality: Flags.airQuality.isEnabled(),
+    }
+  },
   name:'main-wrapper',
   components:{
       Head,
@@ -38,14 +46,6 @@ export default {
       AirQuality,
       Rainfall,
       SunTime,
-  },
-  data () {
-    return {
-      // isDev: process.env.NODE_ENV === 'development',
-      searchBar: Flags.searchBar.isEnabled(),
-      airQuality: Flags.airQuality.isEnabled(),
-
-    }
   }
 }
 </script>

@@ -20,7 +20,7 @@
         <h1
           class="text-[28px] md:text-[25px] lg:text-[32px] font-semibold ml-3"
         >
-          {{ welcomeMsg }}, KubeCon
+          {{ welcomeMsg }}, Amir!
         </h1>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <!-- Dark mode -->
     <div
       class="relative hidden md:flex items-center justify-between px-3 w-[90px] h-[50px] bg-white dark:bg-[#364680] rounded-full hover:cursor-pointer"
-      @click='darkModeChange'
+      @click="darkModeChange"
     >
       <i
         class="ri-sun-line text-white dark:text-[#D6E4FF] text-[24px] z-10"
@@ -45,13 +45,12 @@
 </template>
 
 <script>
-import Rox from 'rox-browser'
-
 export default {
   data() {
     const d = new Date();
     let time = d.getHours() + ":" + d.getMinutes();
     return {
+
       time: time,
     };
   },
@@ -70,23 +69,23 @@ export default {
         return "Good afternoon";
       } else {
         return "Good night";
-          }
-        },
-      },
-    beforeCreate() {
-      // get time
-      setInterval(() => {
-        const d = new Date();
-        const hour = d.getHours();
-        const minutes = d.getMinutes();
-        const format = hour >= 12 ? "PM" : "AM";
-
-        this.time = `${hour > 12 ? hour - 12 : hour}:${
-          minutes < 10 ? "0" + minutes : minutes
-        } ${format}`;
-      }, 1000);
+      }
     },
-  };
+  },
+  beforeCreate() {
+    // get time
+    setInterval(() => {
+      const d = new Date();
+      const hour = d.getHours();
+      const minutes = d.getMinutes();
+      const format = hour >= 12 ? "PM" : "AM";
+
+      this.time = `${hour > 12 ? hour - 12 : hour}:${
+        minutes < 10 ? "0" + minutes : minutes
+      } ${format}`;
+    }, 1000);
+  },
+};
 </script>
 
 <style></style>
