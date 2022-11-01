@@ -9,13 +9,6 @@ export const Flags = {
 
 
 async function initRollout() {
-  const configurationFetchedHandler = fetcherResults => {
-    if (fetcherResults.hasChanges && fetcherResults.fetcherStatus === 'APPLIED_FROM_NETWORK') 
-    {
-      window.location.reload(false) // don't reload the window
-    }
-  }
-
 
   // EXPERIMENTS ARE DEPRECATED THIS IS USING SDK <5.0
   const impressionHandler = (reporting, experiment) => {
@@ -31,12 +24,11 @@ async function initRollout() {
 
 
   const options = {
-    configurationFetchedHandler: configurationFetchedHandler,
     impressionHandler: impressionHandler
   }
 
   // Defined Properties
-  Rox.register('default', Flags)
+  Rox.register('ssr', Flags)
   // test env key
   await Rox.setup(process.env.CBFM_KEY, options)
 }

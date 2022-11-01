@@ -92,8 +92,8 @@ export const mutations = {
 
 export const actions = {
   async nuxtServerInit(vuexContext) {
-    // first enter in page load karaj weather info ssr
-    const cityResult = await this.$axios.get(`location/search/karaj`, {
+    // first enter in page load Detriot weather info ssr
+    const cityResult = await this.$axios.get(`location/search/detroit`, {
       headers: {
         Authorization: vuexContext.state.accessToken,
       },

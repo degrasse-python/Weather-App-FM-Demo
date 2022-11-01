@@ -42,7 +42,7 @@
       <!--===== Github =====-->
       <div class="relative flex">
         <a
-          href="https://github.com/amirz-dev/weather-nuxt"
+          href="https://github.com/"
           target="_blank"
           class="hover:cursor-pointer"
         >

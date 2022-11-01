@@ -9,7 +9,7 @@
         <div class="flex flex-col-reverse xl:flex-row">
           
           <!--===== Air Quality and rainfall =====-->
-          <div class="flex flex-col lg:w-[395px] mt-[18px]">
+          <div class="flex flex-col lg:w-[395px] mt-[18px]">  <!-- /div> v-if="airQuality"-->
             <AirQuality/>
 
             <Rainfall/>
@@ -21,22 +21,22 @@
       </div>
 </template>
 
+
 <script>
 import Head from './wrapper/_head.vue'
 import Days from './wrapper/_days.vue'
 import AirQuality from './wrapper/_airQuality.vue'
 import Rainfall from './wrapper/_rainfall.vue'
 import SunTime from './wrapper/_sunTime.vue'
-import { Flags } from '../../plugins/flags'
-
+// import { Flags } from '../../utils/flags-ssr'
 
 export default {
 
   data () {
     return {
       // isDev: process.env.NODE_ENV === 'development',
-      searchBar: Flags.searchBar.isEnabled(),
-      airQuality: Flags.airQuality.isEnabled(),
+      // searchBar: Flags.searchBar.isEnabled(),
+      // airQuality: Flags.airQuality.isEnabled(),
     }
   },
   name:'main-wrapper',

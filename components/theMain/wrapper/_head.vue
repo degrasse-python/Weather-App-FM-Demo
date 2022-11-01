@@ -1,4 +1,5 @@
 <template>
+
   <div class="flex justify-between">
     <!-- Time -->
     <div class="flex flex-col font-medium">
@@ -20,7 +21,7 @@
         <h1
           class="text-[28px] md:text-[25px] lg:text-[32px] font-semibold ml-3"
         >
-          {{ welcomeMsg }}, Amir!
+          {{ welcomeMsg }}, Cloudbees!
         </h1>
       </div>
     </div>
